@@ -5,11 +5,11 @@
 <li>Contact us for your access token, once you have registered and confirmed</li>
 <li> The request parameters (urlencoded or json) can be given depending on the way of making the request. E.g. if you are using 'curl' to make the request,
 <br><br>
-<i>curl -X DELETE  http://localhost:4000/runsets/1/ -d "user_token=some_string_here"</i>
+<i>curl -X DELETE  http://dafna.qcri.org/runsets/1/ -d "user_token=some_string_here"</i>
 <br><br>
 and 
 <br><br>
-<i>curl -X POST http://localhost:4000/runsets -H "Content-type: application/json" -d '{"user_token":"some_string_here" , "checked_algo": {"Accu": ["0.2", "0", "100", "0.5", "false", "true", "true", "false"] }, "general_config":["0.001", "0.8", "1", "0.4"]}'</i>
+<i>curl -X POST http://dafna.qcri.org/runsets -H "Content-type: application/json" -d '{"user_token":"some_string_here" , "checked_algo": {"Accu": ["0.2", "0", "100", "0.5", "false", "true", "true", "false"] }, "general_config":["0.001", "0.8", "1", "0.4"]}'</i>
 <br><br>
 both are accepted. More details are given in the specific documentation pages.
 <br><br>
