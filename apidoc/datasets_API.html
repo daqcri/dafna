@@ -15,6 +15,9 @@
   <h3>Request</h3>
 <pre>  GET http://dafna.qcri.org/datasets/
 </pre>
+<h3>Body</h3>
+  <pre>  key1=val1&amp;key2=val2&amp;...</pre>Or
+  <pre>  {key1: val1, key2: val2, ...}</pre>
   <h4>Response</h4>
 <table>
   <tbody><tr>
@@ -59,6 +62,44 @@ Where the format of DS<i>n</i> is:
   <a href="#">Back to top</a>
   <hr>
 
+<!-- PARAMETERS TABLE -->
+
+    <h2 id="toc_params">Parameters for Dataset Listing </h2>
+    <table>
+      <tbody><tr>
+        <th>Key</th>
+        <th>Required?</th>
+        <th>Allowed values</th>
+        <th>Description</th>
+      </tr>
+          <tr>
+  <td>user_token</td>
+  <td>Yes</td>
+  <td>Secret Token Provided to API User</td>
+  <td>For Authentication</td>
+</tr>
+   <tr>
+    <td>kind</td>
+    <td>Yes</td>
+    <td>claims, ground</td>
+    <td>Type of dataset</td>
+  </tr>
+
+   <tr>
+    <td>start</td>
+    <td>No</td>
+    <td>Integer</td>
+    <td>The index from which the listing has to start</td>
+  </tr>
+  <tr>
+    <td>length</td>
+    <td>No</td>
+    <td>Integer</td>
+    <td>The maximum number of datasets to be listed</td>
+  </tr>
+    </tbody></table>
+  <a href="#">Back to top</a>
+  <hr>
 <!-- SHOWING -->
 <!--
   <h2 id="toc_showing">Showing a Dataset having id=&lt;id&gt;</h2>
@@ -125,7 +166,7 @@ The pointer object only has either page or chapter/verse combination
 
   <h2 id="toc_creating">Creating a Dataset</h2>
   <h3>Request</h3>
-<pre>  POST http://localhost:4000/datasets/
+<pre>  POST http://dafna.qcri.org/datasets/
 </pre>
 
   <h3>Body</h3>
@@ -206,7 +247,7 @@ Lists all errors that prohibited this Dataset from being processed, grouped by i
    <tr>
     <td>kind</td>
     <td>Yes</td>
-    <td>claims, truth</td>
+    <td>claims, ground</td>
     <td>Type of dataset</td>
   </tr>
 
