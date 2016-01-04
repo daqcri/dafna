@@ -1,15 +1,47 @@
-<script>
+<style>
+#apidoc_content table {
+  border: 1px solid black;
+  border-spacing: 0;
+}
+#apidoc_content th {
+  border: 1px solid black;
+  background-color: silver;
+}
+#apidoc_content td {
+  border: 1px solid black;
+  padding: 5px;
+}
+</style>
+
+<script type="text/javascript">
   $(document).ready(function() {
+    
+    $('#apidoc_content').load('apidoc/gettingstarted.html');
+
     $(function() {
-      $("#exp_index").click(function() {
-        $('#content').load('../exp_index.html');
+      $("#nav_apidoc_gettingstarted").click(function() {
+        $('#apidoc_content').load('apidoc/gettingstarted.html');
       });
-      $("#api_index").click(function() {
-        $('#content').load('../apidoc/index.html');
+      $("#nav_apidoc_datasets").click(function() {
+        $('#apidoc_content').load('apidoc/datasets_API.html');
+      });
+      $("#nav_apidoc_runsets").click(function() {
+        $('#apidoc_content').load('apidoc/runsets_API.html');
+      });
+      $("#nav_apidoc_runs").click(function() {
+        $('#apidoc_content').load('apidoc/runs_API.html');
       });
     });
+
+    GoogleAnalytics();
+
   })
 </script>
+
+<div style="text-align: center; margin-left:auto; margin-right:auto; display: table;"> 
+    <H1 style="text-align: center">VERA APPLICATION</H1>          
+</div>
+
 <div style="width:50%; text-align: left; margin-left:auto; margin-right:auto;"
 <p style="text-align:justify;">
 The vision of VERA is to provide  a Web-based platform that supports the full pipeline of truth discovery from Web unstructured corpus and tweets: ranging from information extraction from raw texts and micro-texts and data fusion to truth discovery and visualization. VERA will offer several advantages over previous work as it includes: 
@@ -25,3 +57,4 @@ information space with disagreeing vs. agreeing sources
 </ul>
 </p>
 </div>
+<div id="apidoc_content" style="margin-left: 10%;margin-right: 10%;"></div>
