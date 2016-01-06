@@ -13,66 +13,7 @@
     });
   })
 </script>
-
-<script type="text/javascript">
-  var $ = jQuery.noConflict();
-  $(document).ready(function(){
-
-    //Start scroll function do 4 times
-
-    var scrollTimes = 4;
-    var scrollCount = 0;
-    var rotation = setInterval(ampScroll,10000);
-
-    function ampScroll(){
-      //Only scroll 4 times
-      if(scrollCount<scrollTimes){
-        if($('#amp-menu a.on').next().length == 0) {
-          ampSwitch($('#amp-menu a:first-child'));
-        } else {
-          ampSwitch($('#amp-menu a.on').next());
-        }
-      }
-      scrollCount++;
-    }
-
-    //Click Functions for Homepage Amp section
-    $('#amp-menu a').click(function(){
-      //Stop rotation
-      if(typeof(rotation) !== 'undefined'){
-        clearInterval(rotation);
-      }
-
-      //Switch to correct section
-      ampSwitch(this);
-
-      //Increment scroll counter
-      scrollCounter++;
-    });
-
-    function ampSwitch(section){
-      var sectionName = $(section).attr('id');
-
-      //Mark all menu links as off
-      $('#amp-menu a').removeClass('on');
-      $(section).addClass('on');
-
-      //Show corresponding title
-      $('#amp-content h2').removeClass('on');
-      $('#' + sectionName + '-desc').addClass('on');
-
-      //Show corresponding image
-      $('#amp-img img').fadeOut();
-      $('#' + sectionName + '-img').fadeIn();
-
-      //Show corresponding text
-      $('#amp-text p').fadeOut();
-      $('#' + sectionName + '-text').fadeIn();
-    }
-  });
-</script>
-
-
+<section id="home">
 <div style="width:100%; text-align: left; margin-left:auto; margin-right:auto;">
   <p style="text-align:justify">
 The main goal of DAFNA project is to design a scalable and accurate truth discovery system to score the veracity of information extracted from multiple online sources.
@@ -96,7 +37,6 @@ of facts related to real events from social media.
 -->
 </div>
  <br/>
-<section id="software">
 <table style="width:100%; text-align: left; margin-left:auto; margin-right:auto;">
 <h1 style="font-size:21px; margin:40px 0;">SOFTWARES</h1>
 <tr>
